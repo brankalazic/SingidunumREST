@@ -1,0 +1,25 @@
+.example-card {
+    max-width: 180px;
+    margin: 0 auto auto auto;
+  }
+  
+  .example-header-image {
+    background-image: url('https://repository.singidunum.ac.rs/images/2014/06/thumb/singidunum-logo.png');
+    background-size: cover;
+  }
+  #about-card{
+    margin: auto;
+    
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 20px;
+  }
+  @media only screen and (max-width: 650px) {
+    #about-card{
+        margin: auto;
+        
+        display: grid;
+        grid-template-columns: auto;
+        
+      }
+  }

@@ -1,0 +1,76 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+h1 {
+  font-family: Helvetica;
+  text-align: center;
+}
+
+label {
+    display: block;
+    font-family: Helvetica;
+    padding-bottom: 14px;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=number] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: auto;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: block;
+  font-family: Helvetica;
+}
+    .error {
+      margin-top: -15px;
+      color: red;
+      padding: .5em;
+      display: inline-block;
+      font-size: .9em;
+      margin-bottom: 20px;
+      font-family: Helvetica;
+    }
+  
+  
+  .cta {
+    background: #DC143C;
+    border: none;
+    color: white;
+  
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: Helvetica;
+    cursor: pointer;
+  }
+
+  .cta:hover {
+    opacity: 0.8;
+  }
+
+  .example-section {
+    display: inline-block;
+    align-content: center;
+    align-items: center;
+    height: 30px;
+    padding-right: 10px;
+  }
+  
+  .results {
+    margin-top: 50px;
+  }
+    strong {
+        display: block;
+    }
+    span {
+        margin-bottom: 20px;
+        display: block;
+    }
+
+   .glavni{
+     text-align: center;
+   } 

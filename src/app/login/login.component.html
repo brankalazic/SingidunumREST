@@ -1,0 +1,73 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-nav [data]="podatak" *ngIf="!isLogIn"></app-nav>
+<app-log-in-nav *ngIf="isLogIn"></app-log-in-nav>
+<div class="row">
+    <div class="col-3 col-s-3 menu" style="visibility: hidden">
+      <ul>
+        <li (click)="changeName('/')">Sve</li>
+        <li (click)="changeName('Bazen')">Bazeni</li>
+        <li (click)="changeName('Bioskop')">Bioskopi</li>
+        <li (click)="changeName('Restoran')">Restorani</li>
+        <li (click)="changeName('Ekskurzija')">Ekskurzije</li>
+      </ul>
+    </div>
+    <div class="col-6 col-s-9">
+      <div class="glavni">
+          <h1>Login</h1>
+         
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                
+              <h5 *ngIf="success">Uspešno ste se ulogovali</h5>
+              <div class="centar">
+              <label>
+                <b>Korisničko ime</b>
+                <input type="text" formControlName="username">
+                <div *ngIf="submitted && loginForm.controls.username.errors" class="error">
+                  <div *ngIf="loginForm.controls.username.errors.required">Unesite korsničko ime</div>
+                </div>
+              </label>
+              
+              <label>
+                <b>Loznika</b>
+                <input type="password" formControlName="password">
+                <div *ngIf="submitted && loginForm.controls.password.errors" class="error">
+                  <div *ngIf="loginForm.controls.password.errors.required">Unesite lozinku</div>
+                </div>
+              </label>
+              
+              <input type="submit" value="Login" class="cta">
+              <br><br>
+              <a routerLink="/RegIn">Kreirajte nalog.</a>
+            </div>
+            </form>
+          
+            <div id="Error"></div>
+          </div>
+      </div>    
+    
+   
+    <div class="col-3 col-s-12" style="visibility: hidden">
+      <div class="aside">
+        <h2>Kome je namenjena aplikacija?</h2>
+        <p>SingidunumREST je namenjena studentima univerziteta Singidunum.</p>
+        <h2>Opis</h2>
+        <p>Aplikacija SingidunumREST pomaže našim studentima da uz svega nekoliko klika pronađu željene
+          lokacije i ostvare popust na njima.
+        </p>
+        <h2>Naš cilj?</h2>
+        <p>Naš cilj je vaše zadovoljstvo i minimalni napor.</p>
+      </div>
+      </div>
+</div>
+
+    
+  
+
+  
+
+
+
+
+
+
+

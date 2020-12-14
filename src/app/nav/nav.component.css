@@ -1,0 +1,35 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    background-color:#CD5C5C;
+    height: 60px;
+    margin: 0;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 250px auto 140px;
+}
+
+*{
+font-size: 18px;
+color: aliceblue;
+
+
+}
+.dugmad{
+    color: black;
+}
+
+li{
+    display: inline;
+}
+.logo{
+font-size: 20px;
+padding-left: 30px;
+
+}
+#navigacija{margin: auto;
+font-size: 18px;
+padding: 0px 16px;}

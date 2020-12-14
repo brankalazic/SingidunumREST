@@ -1,0 +1,71 @@
+
+        <!--The content below is only a placeholder and can be replaced.-->
+<app-nav [data]="podatak" *ngIf="!isLogIn"></app-nav>
+<app-log-in-nav *ngIf="isLogIn" [data]="podatak"></app-log-in-nav>
+<div class="row">
+    <div class="col-3 col-s-3 menu" style="visibility: hidden">
+      <ul>
+        <li (click)="changeName('/')">Sve</li>
+        <li (click)="changeName('Bazen')">Bazeni</li>
+        <li (click)="changeName('Bioskop')">Bioskopi</li>
+        <li (click)="changeName('Spa centar')">Spa centri</li>
+        <li (click)="changeName('Teren')">Fudbalski tereni</li>   
+      </ul>
+    </div>
+    <div class="col-6 col-s-9">
+      <div id="sve">
+        <div *ngIf="relaksacija==undefined" style="text-align: center; font-size: 30px; color: red">
+          Još uvek ne postoje izabrane lokacije.</div>
+        <div id="about-card" *ngIf="relaksacija!=undefined">
+              
+            <mat-card class="example-card" *ngFor="let centar of relaksacija" >
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{centar.ime}}</mat-card-title>
+                  <mat-card-subtitle>{{centar.lokacija}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src={{centar.slika}} alt={{centar.lokacija}}>
+                <mat-card-content>
+                  <p>
+                   Cena: {{centar.cena}}
+                  </p>
+                  <p>
+                      {{centar.popust}}%OFF
+                  </p>
+                </mat-card-content>
+                
+              </mat-card>
+        
+        
+        
+        
+        </div>
+    </div>
+  </div>
+    
+   
+    <div class="col-3 col-s-12">
+        <div class="aside">
+          <h2>Kome je namenjena aplikacija?</h2>
+          <p>SingidunumREST je namenjena studentima univerziteta Singidunum.</p>
+          <h2>Opis</h2>
+          <p>Aplikacija SingidunumREST pomaže našim studentima da uz svega nekoliko klika pronađu željene
+            lokacije i ostvare popust na njima.
+          </p>
+          <h2>Naš cilj?</h2>
+          <p>Naš cilj je vaše zadovoljstvo i minimalni napor.</p>
+        </div>
+      </div>
+</div>
+
+    
+  
+
+  
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+<app-nav [data]="podatak" *ngIf="!isLogIn"></app-nav>
+<app-log-in-nav *ngIf="isLogIn" [data]="podatak"></app-log-in-nav>
+
+
+<div fxLayoutAlign="center center">
+    <h1>SingidunumREST</h1>
+    
+</div>
+
+<p>Korišćenjem aplikacije SingidunumREST, studenti imaju pravo na čak 30% popusta. Izaberi svoje željeno
+    mesto, a mi ćemo ti pomoći da stigneš do njega!
+</p>
+
+<div fxLayoutAlign="center center">
+    <mat-form-field fxFlex="25%">
+        <!-- 
+            keyup           - otpusta taster tastature
+            doFilter metoda - prihvata ono sto je korisnik uneo preko objekta dogadjaja($event.target.value)
+            generisanog u pozadini
+        -->
+        <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Pretraži...">
+    </mat-form-field>
+</div>
+
+<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+</agm-map>

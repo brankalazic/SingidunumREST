@@ -1,0 +1,23 @@
+<app-nav [data]="podatak" *ngIf="!isLogIn"></app-nav>
+<app-log-in-nav *ngIf="isLogIn" [data]="podatak"></app-log-in-nav>
+
+
+<div fxLayoutAlign="center center">
+    <h1>SingidunumREST</h1>
+    
+</div>
+
+<p>Korišćenjem aplikacije SingidunumREST, studenti imaju pravo na čak 30% popusta.
+</p>
+
+<div fxLayout="column" fxLayoutAlign="center center">
+    <h1>Aktivnosti</h1>
+    <p>Ne možete da pronađete aktivnost koju želite?</p>
+
+    <h1>Šta je potrebno da uradite?</h1>
+    <p>Obavestite nas koje mesto biste voleli da posetite.</p>
+
+    <h1>Šta ćemo mi učiniti?</h1>
+    <p>Pogledaćemo Vaš predlog i dodati željeno mesto!</p>
+</div>
+

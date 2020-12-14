@@ -1,0 +1,21 @@
+<section>
+    <script>src="https://unpkg.com/@reactivex/rxjs@5.3.0/dist/global/Rx.js"</script>
+    <div id="navigacija">{{podatak}}</div>
+    <div></div>
+    <div class="navigacijaMeni"><button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>Menu</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink='/'><span class="dugmad">Početna<mat-icon>home</mat-icon></span></button> 
+
+          <button mat-menu-item routerLink='/LogIn'><span class="dugmad">Login<mat-icon>login</mat-icon></span></button>
+         
+          <button mat-menu-item routerLink='/RegIn'><span class="dugmad">Registracija<mat-icon>person</mat-icon></span></button>
+         
+          <button mat-menu-item routerLink='/Search'><span class="dugmad">Pronađi lokaciju<mat-icon>search</mat-icon></span></button>
+        
+          <button mat-menu-item routerLink='/Welcome'><span class="dugmad">Dodaj mesto<mat-icon>location_on</mat-icon></span></button>
+        
+        </mat-menu></div>
+    
+
+
+</section>

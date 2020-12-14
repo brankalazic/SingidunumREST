@@ -1,0 +1,23 @@
+<section>
+
+    <div id="navigacija">{{podatak}}</div>
+    <div></div>
+    <div class="navigacijaMeni"><button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink='/'><span class="dugmad">Početna<mat-icon>home</mat-icon></span></button> 
+
+        <button mat-menu-item routerLink='/LogIn' ><span class="dugmad">Profile<mat-icon>person</mat-icon></span></button>
+       
+        <button mat-menu-item routerLink='/istorija' id="LogIn"><span class="dugmad">Istorija<mat-icon>history</mat-icon></span></button>
+        
+        <button mat-menu-item routerLink='/Welcome'><span class="dugmad">Dodaj mesto<mat-icon>location_on</mat-icon></span></button>
+
+        <button mat-menu-item routerLink='/Search' ><span class="dugmad">Pronađi lokaciju<mat-icon>search</mat-icon></span></button>
+      
+        <button mat-menu-item (click)="LogOut()" id="LogIn"><span class="dugmad">Log out<mat-icon>exit_to_app</mat-icon></span></button>
+      </mat-menu>
+    </div>
+    
+
+
+</section>

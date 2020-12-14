@@ -1,0 +1,12 @@
+section {
+    background-color:#CD5C5C;
+    height: 40px;
+    margin: 0;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 250px auto 140px;
+}
+
+#navigacija{margin: auto;
+    font-size: 18px;
+    padding: 0px 16px;}

@@ -1,0 +1,131 @@
+
+
+  <!--The content below is only a placeholder and can be replaced.-->
+  <app-nav [data]="podatak" *ngIf="!isLogIn"></app-nav>
+  <app-log-in-nav *ngIf="isLogIn"></app-log-in-nav>
+  <div class="row">
+      <div class="col-3 col-s-3 menu" style="visibility: hidden">
+        <ul>
+          <li (click)="changeName('/')">Sve</li>
+          <li (click)="changeName('Bazen')">Bazeni</li>
+          <li (click)="changeName('Bioskop')">Bioskopi</li>
+          <li (click)="changeName('Restoran')">Restorani</li>
+          <li (click)="changeName('Ekskurzija')">Ekskurzije</li>
+        </ul>
+      </div>
+      <div class="col-6 col-s-9">
+          <div class = "glavni">
+              <h1>Registracija</h1>
+
+              <h4>Nemate nalog? Registrujte se već danas!</h4>
+              
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              
+                  
+              
+                  <label>
+                          <b>Ime</b>
+                          <input type="text" formControlName="ime" name="ime">
+                          <div *ngIf="submitted && registerForm.controls.ime.errors" class="error">
+                            <div *ngIf="registerForm.controls.ime.errors.required">Unesite ime</div>
+                          </div>
+                  </label>
+              
+                  <label>
+                          <b>Prezime</b>
+                          <input type="text" formControlName="prezime">
+                          <div *ngIf="submitted && registerForm.controls.prezime.errors" class="error">
+                            <div *ngIf="registerForm.controls.prezime.errors.required">Unesite prezime</div>
+                          </div>
+                  </label>
+              
+                  <label>
+                        <b>Email</b>
+                          <input type="email" formControlName="email">
+                          <div *ngIf="submitted && registerForm.controls.email.errors" class="error">
+                            <div *ngIf="registerForm.controls.email.errors.required">Unesite email</div>
+                          </div>
+                  </label>
+              
+                  <label>
+                        <b>Broj telefona</b>
+                          <input type="number" formControlName="telefon">
+                          <div id="Provera" style="visibility: hidden">Minimun 8 karaktera</div>
+                          <div *ngIf="submitted && registerForm.controls.prezime.errors" class="error">
+                            <div *ngIf="registerForm.controls.prezime.errors.required">Unesite broj telefona</div>
+                          </div>
+                  </label>
+              
+                  <label>
+                    <b>Adresa</b>
+                          <input type="text" formControlName="adresa">
+                          <div *ngIf="submitted && registerForm.controls.adresa.errors" class="error">
+                           <div *ngIf="registerForm.controls.adresa.errors.required">Unesite adresu</div>
+                          </div>
+                  </label>
+              
+                  <label><b>Mesta za posetiti</b></label>
+                  
+                  <label>
+                          <div class="example-section" *ngFor="let data of mesta">
+                          <mat-checkbox (change)="onChange(data.mesta, true)">{{data.mesta}}i</mat-checkbox>
+                          
+                          </div>
+                          <div *ngIf="proveraNiza" class="error">
+                           <div>Unesite mesto za posetu</div>
+                          </div>
+                  </label>
+              
+                  <label>
+                    <b>Korisničko ime</b>
+                    <input type="text" formControlName="username">
+                    <div *ngIf="submitted && registerForm.controls.username.errors" class="error">
+                      <div *ngIf="registerForm.controls.username.errors.required">Unesite korsničko ime</div>
+                    </div>
+                  </label>
+                
+                  <label>
+                    <b>Loznika</b>
+                    <input type="password" formControlName="password">
+                    <div *ngIf="submitted && registerForm.controls.password.errors" class="error">
+                      <div *ngIf="registerForm.controls.password.errors.required">Unesite lozinku</div>
+                    </div>
+                  </label>
+                  <br>
+                  <input type="submit" value="Registruj se" class="cta">
+                
+                </form>
+                <div id="postoji" style="margin-top: 20px; color:red"></div>
+              
+                
+                
+              </div>
+          
+      
+     
+      <div class="col-3 col-s-12" style="visibility: hidden">
+        <div class="aside">
+          <h2>Kome je namenjena aplikacija?</h2>
+          <p>SingidunumREST je namenjena studentima univerziteta Singidunum.</p>
+          <h2>Opis</h2>
+          <p>Aplikacija SingidunumREST pomaže našim studentima da uz svega nekoliko klika pronađu željene
+            lokacije i ostvare popust na njima.
+          </p>
+          <h2>Naš cilj?</h2>
+          <p>Naš cilj je vaše zadovoljstvo i minimalni napor.</p>
+        </div>
+        </div>
+  </div>
+  
+      
+    
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
